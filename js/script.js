@@ -23,23 +23,23 @@ for (let i = 0; i < arrayIcone.length; i++) {
 
 
 
-    console.log(icona);
-    const animali = icona.filter((type) => {
-        if (type === "animal") {
-            return true;
-        }
-        return false;
-    });
 
 
 
 
     container.innerHTML += card;
-    console.log(animali);
 }
 
 
 
-select.addEventListener("change", function () {
-    container.innerHTML = "";
+console.log(icona);
+const animali = icona.filter((type) => {
+    if (type === "animal") {
+        return true;
+    }
+    return false;
 });
+
+/* select.addEventListener("change", function () {
+    container.innerHTML = "";
+}); */
