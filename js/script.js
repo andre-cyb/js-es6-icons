@@ -39,9 +39,20 @@ select.addEventListener("change", function () {
     console.log(value);
 
     if (value === "animal") {
-        printCategories(arrayAnimal);
+        printAnimalCategory(arrayAnimal);
 
     }
+    if (value === "vegetable") {
+        printAnimalCategory(arrayVegetable);
+
+    }
+    if (value === "user") {
+        printAnimalCategory(arrayUser);
+
+    } if (value === "all") {
+        printAnimalCategory(arrayIcone);
+    }
+
 
 });
 
@@ -59,12 +70,25 @@ select.addEventListener("change", function () {
 //FUNZIONI
 
 //funzione per stampare le categorie di icone
-function printCategories(arrayCategory) {
-    arrayCategory.forEach(element => {
-        generateCard(arrayAnimal);
-    });
-}
+function printAnimalCategory(array) {
+    for (let i = 0; i < array.length; i++) {
+        let icona = array[i];
+        let { name, prefix, type, family } = icona;
 
+        let colori = coloriIcone[type];
+        let card = `<div class="card my_col_5 align-items-center pt-2 " style="">
+                        <i class="${family} ${prefix}${name}" style="color:${colori}"></i>
+                        <div class="card-body">${name}</div>
+                    </div>`;
+
+
+
+        container.innerHTML += card;
+
+
+    }
+
+}
 
 
 
@@ -94,3 +118,5 @@ function generateCard(array) {
     }
 
 }
+
+
