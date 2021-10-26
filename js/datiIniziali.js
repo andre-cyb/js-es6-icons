@@ -1,4 +1,4 @@
-[
+let arrayIcone = [
 	{
 		name: 'cat',
 		prefix: 'fa-',
