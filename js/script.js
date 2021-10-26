@@ -4,6 +4,7 @@ console.log(arrayIcone);
 const container = document.querySelector(".card_container");
 const select = document.querySelector(".form-select");
 
+//array per dividere le icone per type
 let arrayAnimal = [];
 let arrayVegetable = [];
 let arrayUser = [];
@@ -19,20 +20,10 @@ console.log(arrayAnimal);
 console.log(arrayVegetable);
 console.log(arrayUser);
 
-//////////////////////////////////////////////////////////
-//VOLEVO USARE LA FUNZIONE FILTER MA DAVA PROBLEMI
-//console.log(icona);
-/* const animali = icona.filter((type) => {
-    if (type === "animal") {
-        return true;
-    }
-    return false;
-});
-*/
-//////////////////////////////////////////////////////////
+//avrei voluto usare la funzione .filter per selezionare i type delle icone ma mi dava problemi
 
 
-
+//add event listener che riconosce la categoria cliccata e stampa le card degli array"type"
 select.addEventListener("change", function () {
     container.innerHTML = "";
     const value = this.value;
@@ -57,19 +48,10 @@ select.addEventListener("change", function () {
 });
 
 
-
-
-
-
-
-
-
-
-
 ///////////////////////////////////////////////////////////////////////
 //FUNZIONI
 
-//funzione per stampare le categorie di icone
+//FUNZIONE PER STAMPARE LE CATEGORIE DI ICONE
 function printAnimalCategory(array) {
     for (let i = 0; i < array.length; i++) {
         let icona = array[i];
@@ -81,18 +63,13 @@ function printAnimalCategory(array) {
                         <div class="card-body">${name}</div>
                     </div>`;
 
-
-
         container.innerHTML += card;
-
-
     }
-
 }
 
 
 
-//funzione per stampare le card
+//FUNZIONE PER STAMPARE LE CARD
 function generateCard(array) {
     for (let i = 0; i < array.length; i++) {
         let icona = array[i];
@@ -104,10 +81,9 @@ function generateCard(array) {
                         <div class="card-body">${name}</div>
                     </div>`;
 
-
-
         container.innerHTML += card;
 
+        //pusho le icone negli array a seconda del loro type
         if (type === "animal") {
             arrayAnimal.push(icona);
         } else if (type === "vegetable") {
