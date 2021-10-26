@@ -60,7 +60,7 @@ function printAnimalCategory(array) {
         let colori = coloriIcone[type];
         let card = `<div class="card my_col_5 align-items-center pt-2 " style="">
                         <i class="${family} ${prefix}${name}" style="color:${colori}"></i>
-                        <div class="card-body">${name}</div>
+                        <div class="card-body text_style">${name}</div>
                     </div>`;
 
         container.innerHTML += card;
@@ -78,7 +78,7 @@ function generateCard(array) {
         let colori = coloriIcone[type];
         let card = `<div class="card my_col_5 align-items-center pt-2 " style="">
                         <i class="${family} ${prefix}${name}" style="color:${colori}"></i>
-                        <div class="card-body">${name}</div>
+                        <div class="card-body text_style">${name}</div>
                     </div>`;
 
         container.innerHTML += card;

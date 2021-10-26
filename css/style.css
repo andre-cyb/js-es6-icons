@@ -1,22 +1,28 @@
 header h1{
     color: lightskyblue;
 }
+main{
+    background-color: rgb(233, 233, 233);
+    height: 100vh;
+}
 .my_select{
     display: inline-block;
     width: 200px;
 }
-
 .bg-info {
     --bs-bg-opacity: 1;
     background-color: lightskyblue!important
 }
-
-
 .my_col_5{
-    width: calc((100% / 12) * 3);
-    margin: 10px;
     
+    max-width: 200px;
+    margin: 10px;  
 }
 i{
     font-size: 50px;
+}
+.text_style{
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(44, 44, 44);
 }
