@@ -1,9 +1,11 @@
+
 header h1{
     color: lightskyblue;
 }
 main{
     background-color: rgb(233, 233, 233);
-    height: 100vh;
+    /* height: calc(100vh - 161px); */
+    height: 150vh; /* so che non si fa ma avevo dei problemi con lo sfondo */
 }
 .my_select{
     display: inline-block;
@@ -16,13 +18,18 @@ main{
 .my_col_5{
     
     max-width: 200px;
-    margin: 10px;  
+    margin: 60px;  
 }
 i{
     font-size: 50px;
+    padding: 15px;
 }
 .text_style{
     font-weight: bold;
     font-size: 20px;
     color: rgb(44, 44, 44);
+}
+.my_border{
+    box-shadow: 2px 2px 3px grey;
+    border-radius: 15px;
 }

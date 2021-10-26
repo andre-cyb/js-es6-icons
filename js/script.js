@@ -1,3 +1,5 @@
+"use strict";
+
 console.log(arrayIcone);
 
 
@@ -58,7 +60,7 @@ function printAnimalCategory(array) {
         let { name, prefix, type, family } = icona;
 
         let colori = coloriIcone[type];
-        let card = `<div class="card my_col_5 align-items-center pt-2 " style="">
+        let card = `<div class="card my_col_5 align-items-center pt-2 my_border" style="">
                         <i class="${family} ${prefix}${name}" style="color:${colori}"></i>
                         <div class="card-body text_style">${name}</div>
                     </div>`;
@@ -76,7 +78,7 @@ function generateCard(array) {
         let { name, prefix, type, family } = icona;
 
         let colori = coloriIcone[type];
-        let card = `<div class="card my_col_5 align-items-center pt-2 " style="">
+        let card = `<div class="card my_col_5 align-items-center pt-2 my_border" style="">
                         <i class="${family} ${prefix}${name}" style="color:${colori}"></i>
                         <div class="card-body text_style">${name}</div>
                     </div>`;
